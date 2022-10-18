@@ -39,6 +39,7 @@ h4 {
 .media .caption {
     position: absolute;
     bottom: 0.3rem;
+    left: 0.3rem;
     color: yellow;
 }
 
@@ -46,97 +47,16 @@ img {
     max-width: 100%;
 }
 
-#divNav {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding: 0.5rem;
+.mediaBottom {
+    position: relative;
+    display: table-cell;
 }
 
-#divHeader {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-}
-
-#divOpacity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, .1);
-    color: #ff922c;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
-    vertical-align: bottom;
-}
-
-#divSection {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem;
-}
-
-#divCards {
-    flex-grow: 2;
-    display: grid;
-    background-color: #B8B9BF;
-    padding: 0.5rem;
-    grid-template-areas: "card1 card2" "card3 card4" "bottomCards bottomCards";
-    gap: 0.5rem;
-}
-
-#aside {
-    flex-grow: 1;
-    display: flex;
-    background-color: #B8B9BF;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    flex-direction: column;
-    text-align: center;
-}
-
-#divCards>#card1,
-#card2,
-#card3,
-#card4 {
-    background-color: #F5F1F1;
-    padding: 0.5rem;
-}
-
-#divCards>#card1 {
-    grid-area: card1;
-}
-
-#divCards>#card2 {
-    grid-area: card2;
-}
-
-#divCards>#card3 {
-    grid-area: card3;
-}
-
-#divCards>#card4 {
-    grid-area: card4;
-}
-
-#divCards>#bottomCards {
-    background-color: #B8B9BF;
-    grid-area: bottomCards;
-    text-align: center;
-}
-
-#footer {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-#title {
-    font-weight: bold;
+.mediaBottom .captionBottom {
+    position: initial;
+    bottom: 0.3rem;
+    left: 0.3rem;
+    color: #b1afaf;
 }
 
 header {
@@ -148,6 +68,36 @@ header {
     background-position: center;
     justify-content: space-between;
     margin: 0.5rem;
+}
+
+#divNav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+#divHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+#leftNav,
+#rightNav {
+    flex-grow: 1;
+}
+
+#centerNav {
+    flex-grow: 2;
+}
+
+.navbar-logo {
+    width: 70px;
 }
 
 nav {
@@ -181,8 +131,84 @@ nav a:hover {
     display: inline-block;
 }
 
-.navbar-logo {
-    width: 70px;
+#divOpacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #ff922c;
+    opacity: .2;
+    padding: 0.5rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+    margin-bottom: -0.5rem;
+    vertical-align: bottom;
+}
+
+#divSection {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+#divCards {
+    flex-grow: 2;
+    display: grid;
+    background-color: #B8B9BF;
+    padding: 0.5rem;
+    grid-template-areas: "card1 card2" "card3 card4" "bottomCards bottomCards";
+    gap: 0.5rem;
+}
+
+#divCards>#card1,
+#card2,
+#card3,
+#card4 {
+    background-color: #F5F1F1;
+    padding: 0.5rem;
+}
+
+#divCards>#card1 {
+    grid-area: card1;
+}
+
+#divCards>#card2 {
+    grid-area: card2;
+}
+
+#divCards>#card3 {
+    grid-area: card3;
+}
+
+#divCards>#card4 {
+    grid-area: card4;
+}
+
+#divCards>#bottomCards {
+    background-color: #B8B9BF;
+    grid-area: bottomCards;
+    text-align: center;
+}
+
+#aside {
+    flex-grow: 1;
+    display: flex;
+    background-color: #B8B9BF;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#footer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 
@@ -234,10 +260,12 @@ nav a:hover {
         background: tomato;
         color: #333;
     }
-    #divNav,
-    #divOpacity {
+    #divNav {
         gap: 1rem;
         padding: 1rem;
+    }
+    #divOpacity {
+        display: none;
     }
 }
 
@@ -282,5 +310,8 @@ nav a:hover {
     nav a:hover {
         background: tomato;
         color: #333;
+    }
+    #divOpacity {
+        display: none;
     }
 }
