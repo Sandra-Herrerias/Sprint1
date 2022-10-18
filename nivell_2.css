@@ -1,229 +1,286 @@
 .maxWidth {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 
 .wrapper {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
 }
-body{
-  font-family: 'Barlow Semi Condensed', sans-serif;
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .backColor {
-  background-color: #F8F8F8;
-}
-h4 {
-  background-color: #f08080;
-  color: #F9EDE5;
-  padding-top: 0.5rem;
-  padding-left:0.2rem;
-  font-size: large;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.contentCard{
-  display: flex;
-  flex-direction: row;
+    background-color: #F8F8F8;
 }
 
+h4 {
+    background-color: #f08080;
+    color: #F9EDE5;
+    padding-top: 0.5rem;
+    padding-left: 0.2rem;
+    font-size: large;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contentCard {
+    display: flex;
+    flex-direction: row;
+}
 
 .media {
-  position: relative;
-  display: table-cell;
+    position: relative;
+    display: table-cell;
 }
+
 .media .caption {
-  position: absolute;
-  bottom: 0.3rem;
-  color:yellow;
+    position: absolute;
+    bottom: 0.3rem;
+    color: yellow;
 }
+
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
-#div1 {
-  display: flex;
-  flex-direction: column;
-
-  padding: 0.5rem;
+#divNav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
-#div12 {
-  width: 100%;
-  margin: 0 auto;}
-
-#div121 {
-  background-color: #fed460;
+#divHeader {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
 }
 
-#div2 {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.5rem;
+#divOpacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .1);
+    color: #ff922c;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+    vertical-align: bottom;
 }
 
-#div21 {
-  flex-grow: 2;
-  display: grid;
-  background-color: #B8B9BF;
-  padding: 0.5rem;
-  grid-template-areas:
-    "div211 div212"
-    "div213 div214"
-    "div215 div215";
-  gap: 0.5rem;
+#divSection {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
-#div22 {
-  flex-grow: 1;
-  display: flex;
-  background-color: #B8B9BF;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  flex-direction: column;
-  text-align: center;
+#divCards {
+    flex-grow: 2;
+    display: grid;
+    background-color: #B8B9BF;
+    padding: 0.5rem;
+    grid-template-areas: "card1 card2" "card3 card4" "bottomCards bottomCards";
+    gap: 0.5rem;
 }
 
-#div21 > #div211,
-#div212,
-#div213,
-#div214 {
-  background-color: #F5F1F1;
-  padding: 0.5rem;
+#aside {
+    flex-grow: 1;
+    display: flex;
+    background-color: #B8B9BF;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: center;
 }
 
-#div21 > #div211 {
-  grid-area: div211;
+#divCards>#card1,
+#card2,
+#card3,
+#card4 {
+    background-color: #F5F1F1;
+    padding: 0.5rem;
 }
 
-#div21 > #div212 {
-  grid-area: div212;
+#divCards>#card1 {
+    grid-area: card1;
 }
 
-#div21 > #div213 {
-  grid-area: div213;
+#divCards>#card2 {
+    grid-area: card2;
 }
 
-#div21 > #div214 {
-  grid-area: div214;
+#divCards>#card3 {
+    grid-area: card3;
 }
 
-#div21 > #div215 {
-  background-color: #B8B9BF;
-  grid-area: div215;
-  text-align: center;
+#divCards>#card4 {
+    grid-area: card4;
+}
+
+#divCards>#bottomCards {
+    background-color: #B8B9BF;
+    grid-area: bottomCards;
+    text-align: center;
 }
 
 #footer {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width:100%;
+    width: 100%;
 }
 
 #title {
-  font-weight: bold;
+    font-weight: bold;
 }
+
+header {
+    background-image: url('img/header.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+nav a {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 20px;
+    color: #808080;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #808080;
+    padding-bottom: .25em;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    border-bottom: 0;
+    padding-bottom: .3em;
+    text-decoration: none;
+}
+
+.topnav-right {
+    text-align: end;
+    display: inline-block;
+}
+
+.navbar-logo {
+    width: 70px;
+}
+
 
 /* Media Query for Mobile Devices */
+
 @media only screen and (max-width: 576px) {
-
-  #div2 {
-    flex-flow: column wrap;
-  }
-
-
-  #div12 {
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  #div2.backColor {
-    background-color: #fee228;
-  }
-
-  #div21 {
-    background-color: #09506f;
-    grid-template-areas:
-      "div211"
-      "div212"
-      "div213"
-      "div214"
-      "div215";
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  #div21 > #div211,
-  #div212,
-  #div213,
-  #div214 {
-    background-color: #61959c;
-  }
-
-  #div21 > #div215 {
-    background-color: #a3ddcb;
-  }
-
-  #div22 {
-    background-color: #fd7b54;
-    padding: 1rem;
-  }
-
-  #div1,
-  #div2,
-  #footer {
-    padding: 1rem;
-  }
+    #divNav,
+    #divSection {
+        flex-flow: column wrap;
+    }
+    #divSection.backColor {
+        background-color: #333;
+    }
+    #divCards {
+        background-color: #B8B9BF;
+        grid-template-areas: "card1" "card2" "card3" "card4" "bottomCards";
+        gap: 1rem;
+        padding: 1rem;
+    }
+    #divCards>#card1,
+    #card2,
+    #card3,
+    #card4,
+    #bottomCards {
+        background-color: #F5F1F1;
+    }
+    #aside {
+        background-color: #F5F1F1;
+        padding: 1rem;
+    }
+    #divHeader,
+    #divSection,
+    #footer {
+        padding: 1rem;
+    }
+    nav {
+        font-family: Verdana, Geneva, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #F8F8F8;
+    }
+    nav a {
+        color: #333;
+        display: block;
+        text-decoration: none;
+        padding: .2em 1em;
+    }
+    nav a:hover {
+        background: tomato;
+        color: #333;
+    }
+    #divNav,
+    #divOpacity {
+        gap: 1rem;
+        padding: 1rem;
+    }
 }
 
+
 /* Media Query for Tablets, Ipads */
+
+
 /*(min-width: 481px) and (max-width: 767px)*/
+
 @media only screen and (min-width: 577px) and (max-width: 991px) {
-  #div2 {
-    flex-flow: column wrap;
-  }
-
-  #div2.backColor {
-    background-color: #feff03;
-  }
-
-  #div1,
-  #div2,
-  #footer {
-    padding: 0.7rem;
-  }
-
-  #div12,
-  #div21,
-  #div22 {
-    gap: 0.7rem;
-    padding: 0.7rem;
-  }
-
-
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+    #divNav,
+    #divSection {
+        flex-flow: column wrap;
+    }
+    #divSection.backColor {
+        background-color: #333;
+    }
+    #divHeader,
+    #divSection,
+    #footer {
+        padding: 0.7rem;
+    }
+    #divCards,
+    #aside,
+    #divNav,
+    #divOpacity {
+        gap: 0.7rem;
+        padding: 0.7rem;
+    }
+    nav {
+        font-family: Verdana, Geneva, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #F8F8F8;
+    }
+    nav a {
+        color: #333;
+        display: block;
+        text-decoration: none;
+        padding: .2em 1em;
+    }
+    nav a:hover {
+        background: tomato;
+        color: #333;
+    }
 }
